@@ -78,9 +78,16 @@ namespace JM_Transpilator
 
         private static string SetUpMethodHeader(string line)
         {
+            string result = "";
             line = line.Replace(", EnableQuery", "");
 
-            return line;
+            if (line.Contains("ResponseType"))
+            {
+                string type = Split(Split(line, "ResponseType(typeof(")[1], ")")[1];
+                //result = 
+            }
+
+            return result;
         }
     }
 }
